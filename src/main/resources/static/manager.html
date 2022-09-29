@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>| client manager</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- my CSS -->
+    <link rel="stylesheet" href="./web/assets/css/style.css">
+</head>
+
+<body>
+    <div id="app">
+        <header>
+            <div class="container-fluid d-flex justify-content-around">
+                <h1 class="container pt-1">Client Manager</h1>
+                <nav class="navbar">
+                    <a class="navbar-brand" href="./web/index.html">Home</a>
+                </nav>
+            </div>
+        </header>
+        
+        <main>
+            <div class="container">
+                <p>Add new client:</p>
+                <form>
+                    <div class="formulario mb-3">
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Name:</label>
+                            <input v-model="firstName" type="text" class="form-control" id="exampleInputPassword1" placeholder="name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Last Name:</label>
+                            <input v-model="lastName" type="text" class="form-control" id="exampleInputPassword2" placeholder="last name">
+                        </div>
+                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                        <input v-model="email" type="email" class="form-control" id="exampleInputEmail1" placeholder="email@mail.com"
+                            aria-describedby="emailHelp">
+                            <button @click="addClient" type="button" class="btn btn-dark my-3">Add client</button>
+                    </div>
+                </form>
+                <div class="container-fluid">
+                    <table class="table table-striped table-hover mt-5">
+                        <tr>
+                            <td class="px-2"> Name </td>
+                            <td> Last Name </td>
+                            <td> Email</td>
+                            <td> </td>
+                            <td> </td>                 
+                        </tr>
+                        <tr v-for="client in clients">
+                            <td class="p-2">{{client.firstName}}</td>
+                            <td>{{client.lastName}} </td>
+                            <td>{{client.email}} </td> 
+                            <td><a class="ir_a_account btn btn-succes" :href="'accounts.html?id= ' + client.id">Accounts</a></td>                       
+                            <td><a class="cards_button btn btn-warning" :href="'cards.html?id= ' + client.id">Cards -></a></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </main>
+    
+        <footer>
+            <p class="text-center pt-2">Cohort -30- 2022</p>
+        </footer>
+    </div>
+
+
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+
+    <!-- Axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <!-- Vue -->
+    <script src="https://unpkg.com/vue@3"></script>
+
+    <!-- My Script -->
+    <script src="./web/assets/js/manager.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+}
+
+.logo{
+    display: inline-block;
+}
+
+.logo img{
+    width: 20rem;
+    height: 3.5rem;
+    margin-top: .5rem;
+}
+
+.nav_index{
+    margin-top: 1rem;
+    margin-right: .5rem;
+}
+
+.nav_index>a{
+    padding: .5rem;
+    transition: .2s;
+}
+
+.nav_index>a:hover{
+    background-color: #00c6fb;
+    color: whitesmoke;
+    border-radius: 5px;
+}
+
+.register{
+    display: flex;
+    justify-content: space-between;
+}
+
+.backgroundImage{
+    /* height: 80vh; */
+    background-image: url(../img/4.jpg);
+}
+
+.background-image-register{
+    height: 85vh;
+    background-image: url(../img/fondo-register.jpg);
+    background-position: center;
+}
+
+.welcome{
+    text-align: center;
+    color: #181818;
+}
+
+.registerTitle{
+    text-align: center;
+    color: #181818;
+}
+
+main{
+    min-height: 85vh;
+}
+
+footer{
+    height: 7vh;
+}
+
+@media(max-width: 767px){
+    .backgroundImage{
+        height: 80vh;
+    }
+}
+
+@media(min-width: 320px){
+    .backgroundImage{
+        height: 85vh;
+    }
+    main{
+        min-height: 85vh;
+    }
+    .logo{
+        margin-right: -30px;
+    }
+}
