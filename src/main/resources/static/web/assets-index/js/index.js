@@ -29,7 +29,7 @@ const app = Vue.createApp({
         .post(
           "/api/clients",
           `firstName=${this.firstName}&lastName=${this.lastName}&email=${this.email}&password=${this.pwd}`,
-          { headers: { "content-type": "application/x-www-form-urlencoded" } }
+          // { headers: { "content-type": "application/x-www-form-urlencoded" } }
         )
         .then((response) => this.login())
         .catch(function (error) {
