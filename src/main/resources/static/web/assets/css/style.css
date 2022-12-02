@@ -1,113 +1,119 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
 }
 
-body{
+body {
     background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
 }
 
-.logo{
+main{
+    min-height: 85vh;
+}
+
+.logo {
     display: inline-block;
 }
 
-.logo img{
+.logo img {
     width: 20rem;
     height: 3.5rem;
-    margin-top: 1rem;
+    margin-bottom: .5rem;
 }
 
-.log_out{
+.log_out {
     text-decoration: none;
     cursor: pointer;
     color: black;
 }
 
-.log_out>i{
+.log_out>i {
     width: 2rem;
     transition: transform .2s;
 }
 
-.log_out>i:hover{
+.log_out>i:hover {
     transform: scale(1.1);
     background-color: crimson;
     border-radius: 360px;
     color: white;
 }
 
-.navbar{
+.navbar {
     float: right;
 }
 
-.titulo{
-    margin-left: 1rem;
+.titulo {
     margin-top: 1.5rem;
     color: #0c2e8a;
 }
 
-.navbar-brand:hover{
+.navbar-brand:hover {
     color: #50d8af;
 }
 
-.formulario{
+.formulario {
     width: 80%;
     margin-inline: auto;
 }
 
-table{
+.shadow{
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px !important;
+}
+
+table {
     width: 60%;
     margin: auto;
 }
 
-.table_2{
+.table_2 {
     margin-top: 2rem;
 }
 
-.table_1{
+.table_1 {
     margin-top: 1.5rem;
 }
 
-.btn{
+.btn {
     float: right;
     margin-right: 6rem;
 }
 
-.btn_create_account{
+.btn_create_account {
     font-size: 20px;
     border-radius: 5px;
-    padding: 5px;
-    background-color: #50d8af;
+    padding: 8px;
+    background-color: rgba(0, 148, 44, 0.719);
     color: rgb(0, 0, 0);
     border: none;
-    transition: transform .2s;
+    transition: transform .3s;
 }
 
-.btn_create_account:hover{
-    background-color: rgb(13, 171, 13);
+.btn_create_account:hover {
+    background-color: rgb(23, 138, 23);
     color: rgb(255, 255, 255);
-    text-transform: uppercase;
     transform: scale(1.1);
 }
 
-.btn_delete_account{
+.btn_delete_account {
     font-size: 20px;
     border-radius: 5px;
-    padding: 5px;
-    background-color: rgba(236, 18, 18, 0.863);
-    color: rgb(255, 255, 255);
+    padding: 8px;
+    background-color: rgba(161, 3, 3, 0.719);
+    color: rgb(0, 0, 0);
     border: none;
-    transition: transform .2s;
+    transition: transform .3s;
 }
 
-.btn_delete_account:hover{
+.btn_delete_account:hover {
     background-color: rgb(201, 0, 0);
     color: rgb(255, 255, 255);
-    text-transform: uppercase;
     transform: scale(1.1);
 }
 
-.create_card{
+.create_card {
     font-size: 20px;
     text-decoration: none;
     padding: 5px;
@@ -115,29 +121,27 @@ table{
     background-color: #50d8af;
     color: rgb(255, 255, 255);
     transition: transform .2s;
-    /* float: right; */
 }
 
-.create_card:hover{
+.create_card:hover {
     background-color: rgb(6, 158, 6);
     color: rgb(255, 255, 255);
-    /* text-transform: uppercase; */
     transform: scale(1.1);
 }
 
-.contenedor_tabla_cards{
+.contenedor_tabla_cards {
     margin-top: 4rem;
     width: 80%;
     margin-left: auto;
     margin-right: auto;
 }
 
-.contenedor_inputs{
+.contenedor_inputs {
     width: 50%;
     margin-inline: auto;
 }
 
-select{
+select {
     width: 10rem;
     height: 1.8rem;
     border-color: darkblue;
@@ -145,7 +149,7 @@ select{
     border-right: none;
 }
 
-.inputs_transfers>input{
+.inputs_transfers>input {
     height: 2.5rem;
     width: 15rem;
     border-color: darkblue;
@@ -153,86 +157,70 @@ select{
     border-bottom: none;
 }
 
-header{
-    height: 10vh;
-}
-
-main{
-    min-height: 80vh;
-}
-
-.ir_a_account{
+.ir_a_account {
     color: black;
     text-decoration: none;
 }
 
-.cards_button{
+.cards_button {
     text-decoration: none;
     color: black;
     float: right;
 }
 
-.btnCreateCard{
+.btnCreateCard {
     color: rgb(255, 255, 255);
     background-color: #50d8af;
     margin-top: 1rem;
     border-radius: 15px;
     border: none;
     padding: .5rem;
+    transition: all ease-out .3s;
 }
 
-.btnCreateCard:hover{
+.btnCreateCard:hover {
     color: rgb(0, 0, 0);
     background-color: rgba(38, 185, 12, 0.769);
     text-transform: uppercase;
+    transform: scale(1.1);
 }
 
-footer{
-    height: 7vh;
-}
 
-.copy{
-    display: flex;
-    justify-content: space-between;
-    padding-top: .8rem;
-    margin-left: .5rem;
-    margin-right: .5rem;
-}
-
-.contactIco{
+.contactIco {
     text-decoration: none;
     color: #50d8af;
-    margin-left: .8rem;
-    width: 2rem;
     transition: transform .2s;
 }
 
-.contactIco:hover{
+.contactIco:hover {
     color: #0c2e8a;
-    transform: scale(1.3);
+    transform: scale(1.1);
+}
+
+.contacto>p{
+    margin-bottom: 0;
 }
 
 /* MEDIAQUERIES */
 
-@media (min-width: 320px){
+@media (min-width: 320px) {
 
-    .btn{
+    .btn {
         margin-right: 2rem;
     }
 
-    .boton_modal{
+    .boton_modal {
         margin: 1rem auto;
     }
 
-    footer{
-        height: 5vh;
+    footer {
         background-color: #f2f5f8;
         text-align: center;
         padding: .5rem auto;
-        margin-top: 1rem;
     }
 
-    footer>p{
-        margin-top: 2.5rem;
-    }
+    /* .contacto{
+        flex-direction: column;
+        padding-top: .5rem;
+    } */
 }

@@ -122,27 +122,26 @@ iframe {
 /*//////////////////////////////////////////////////////////////////
   [ Utility ]*/
 .txt1 {
+    display: block;
     font-size: 13px;
     color: #666666;
     line-height: 1.5;
 }
 
 .txt2 {
-    display: block;
     font-size: 13px;
     color: #333333;
     line-height: 1.5;
     text-decoration: none;
     margin-left: 5px;
-    transition: transform .3s;
+    transition: all ease-out .3s;
 }
 
 .txt2:hover{
-    text-transform: uppercase;
     background-color: #6a7dfe;
     border-radius: 25px;
     color: white;
-    padding: 5px;
+    padding: 5px 10px;
     transform: scale(1.1);
 }
 
@@ -165,12 +164,12 @@ iframe {
     /* flex-wrap: wrap; */
     justify-content: center;
     align-items: center;
-    padding: 15px;
+    /* padding: 15px; */
     /* background: #f2f2f2; */
 }
 
 .wrap-login100 {
-    margin-top: 2rem;
+    margin-top: 1rem;
     width: 390px;
     background: #fff;
     border-radius: 10px;

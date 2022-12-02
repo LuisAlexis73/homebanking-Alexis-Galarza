@@ -31,7 +31,7 @@
 
 <body>
     <div id="app">
-        <header>
+        <header class="d-flex align-items-center justify-content-between">
             <div class="logo">
                 <a href="./reveal/index.html">
                     <img class="mx-4" src="./assets/img/brand.jpg" alt="Logo bank brothers">
@@ -52,9 +52,9 @@
                             <li class="nav-item">
                                 <a class="nav-link navbar-brand" href="create-cards.html">Create cards</a>
                             </li>
-                            <li class="nav-item">
+                            <!-- <li class="nav-item">
                                 <a class="nav-link navbar-brand" href="cards.html">Cards</a>
-                            </li>
+                            </li> -->
                             <li class="nav-item">
                                 <a class="btn-primary nav-link navbar-brand" data-bs-toggle="modal"
                                     href="#exampleModalToggle">Transfers</a>
@@ -81,7 +81,7 @@
 
                 <!-- Buttons Open Modal create and delete account -->
 
-                <div class="container d-flex justify-content-between">
+                <div class="container d-flex justify-content-evenly pt-4">
                     <button type="button" class="btn_create_account" data-bs-toggle="modal"
                     data-bs-target="#exampleModal">New account</button>
 
@@ -89,37 +89,30 @@
                     data-bs-target="#exampleModal2">Delete account</button>
                 </div>
 
-                <!-- Table Data -->
-                <div class="container contenedor_tabla1 ">
-                    <table class="table table_1">
-                        <tr class="table-light">
-                            <td>Name</td>
-                            <td>Account-Number</td>
-                            <td>Balance</td>
-                            <td>Type account</td>
-                        </tr>
-                        <tr v-for="account in accounts">
-                            <td>{{clients.firstName}} {{clients.lastName}}</td>
-                            <td>{{account.number}} </td>
-                            <td>${{account.balance}}</td>
-                            <td>{{account.type}}</td>
-                        </tr>
-                    </table>
-
-                    <h2 class="mt-3" v-if="loans.length == 0">No loans for now.</h2>
-                    <h2 class="mt-5" style="color: #0c2e8a;">Loans</h2>
-                    <table class="table table_2">
-                        <tr class="table-light">
-                            <td>Name of loan apply</td>
-                            <td>Amount to pay</td>
-                            <td>Payments</td>
-                        </tr>
-                        <tr v-for="loan in loans">
-                            <td>{{loan.name}}</td>
-                            <td>$ {{loan.amount}} </td>
-                            <td>{{loan.payments}}</td>
-                        </tr>
-                    </table>
+                <!-- Cards Data -->
+                <div class="container-fluid d-flex justify-content-between gap-4 mt-4 pt-4">
+                    <div v-for="account in accounts">
+                        <div class="shadow">
+                            <div class="card bg-dark text-white bg-opacity-75">
+                                <div class="card-body row">
+                                    <div class="card-header">
+                                        <h5>Name - {{clients.firstName}} {{clients.lastName}}</h5>
+                                    </div>
+                                    <div class="pt-2">
+                                        <p>Account Numbrer: {{account.number}}</p>
+                                        <hr>
+                                    </div>
+                                    <div>
+                                        <p>Balance= ${{account.balance}}</p>
+                                        <hr>
+                                    </div>
+                                    <div>
+                                        <p>Type Account: {{account.type}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div>
@@ -219,23 +212,22 @@
                 </div>
             </div>
         </main>
-    </div>
-
-    <footer>
-        <div class="copy">
-            <div class="contacto d-flex justify-content-evenly">
-                <p class="pt-1">Hecho por -Galarza Alexis-</p>
-                <a class="contactIco" href="">
-                    <i class='bx bxl-github fs-2'></i>
-                </a>
-                <a class="contactIco" href="">
-                    <i class='bx bxl-linkedin-square fs-2'></i>
-                </a>
+        <footer>
+            <div class="contacto d-flex justify-content-around align-items-center">
+                <div class="d-flex ">
+                    <p class="pt-2 mb-0">Hecho por -Galarza Alexis-</p>
+                    <a class="contactIco ps-2" href="">
+                        <i class='bx bxl-github fs-2 pt-2'></i>
+                    </a>
+                    <a class="contactIco ps-2" href="">
+                        <i class='bx bxl-linkedin-square fs-2 pt-2'></i>
+                    </a>
+                </div>
+                <p class="">&copy; todos los derechos reservados</p>
+                <p class="">Cohort -30 Full Stack Java- 2022</p>
             </div>
-            <p>&copy; todos los derechos reservados</p>
-            <p class="pt-2">Cohort -30 Full Stack Java- 2022</p>
-        </div>
-    </footer>
+        </footer>
+    </div>
 
     <!-- Axios -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>

@@ -10,10 +10,11 @@ const app = Vue.createApp({
   created() {},
   methods: {
     login() {
-      axios
+/*      axios
         .post("/api/login", `email=${this.email}&pwd=${this.pwd}`, {
-          headers: { "content-type": "application/x-www-form-urlencoded" },
-        })
+          headers: { "content-type": "application/x-www-form-urlencoded" }
+        })*/
+        axios.post('/api/login',"email=" + this.email + "&pwd=" + this.pwd,{headers : {'Content-Type':'application/x-www-form-urlencoded'}})
         .then((response) => (location.href = "/web/accounts.html"))
         .catch((response) =>
           Swal.fire({
@@ -25,12 +26,9 @@ const app = Vue.createApp({
     },
 
     register() {
-      axios
-        .post(
-          "/api/clients",
-          `firstName=${this.firstName}&lastName=${this.lastName}&email=${this.email}&password=${this.pwd}`,
-          // { headers: { "content-type": "application/x-www-form-urlencoded" } }
-        )
+        axios.post("/api/clients",
+          "firstName=" + this.firstName + "&lastName=" + this.lastName + "&email=" + this.email + "&password=" + this.pwd,
+          {headers : {"Content-Type": "application/x-www-form-urlencoded"}})
         .then((response) => this.login())
         .catch(function (error) {
           console.log(error);

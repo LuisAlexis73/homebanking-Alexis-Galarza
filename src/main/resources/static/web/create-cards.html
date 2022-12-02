@@ -24,7 +24,7 @@
 
 <body>
     <div id="app">
-        <header>
+        <header class="d-flex align-items-center justify-content-between">
             <div class="logo">
                 <a href="./reveal/index.html">
                     <img class="mx-4" src="./assets/img/brand.jpg" alt="Logo bank brothers">
@@ -58,29 +58,38 @@
         </header>
 
         <main>
-            <h4 class="titulo text-center py-3 bg-body">CREATE CARDS</h4>
-
-            <div class="container-fluid d-flex flex-column col-lg-2 mt-3">
-                <h6>Selected:</h6>
-                <select v-model="selectedType">
-                    <option disabled value="">Select type card</option>
-                    <option>DEBIT</option>
-                    <option>CREDIT</option>
-                </select>
-
-                <h6>Selected:</h6>
-                <select v-model="selectedColor">
-                    <option disabled value="">Select color type card please..</option>
-                    <option>SILVER</option>
-                    <option>TITANIUM</option>
-                    <option>GOLD</option>
-                </select>
-
-                <button type="submit" class="btnCreateCard w-75 ms-1" @click="createCards">Create a card</button>
+        
+            <div class="container-fluid">
+                <h3 class="titulo text-center py-3 bg-body">CREATE CARDS</h3>
+                <div class="container d-flex mt-4 pt-2 justify-content-evenly">
+                    <div>                        
+                        <h6>Type Card:</h6>
+                        <select v-model="selectedType">
+                            <option disabled value="">Select type card</option>
+                            <option>DEBIT</option>
+                            <option>CREDIT</option>
+                        </select>
+                    </div>
+    
+                    <div>
+                        <h6>Type Color:</h6>
+                        <select v-model="selectedColor">
+                            <option disabled value="">Select color card</option>
+                            <option>SILVER</option>
+                            <option>TITANIUM</option>
+                            <option>GOLD</option>
+                        </select>
+                    </div>
+    
+                </div>
+                <div class="text-center mt-2">
+                    <button type="submit" class="btnCreateCard w-25 " @click="createCards">Create a card</button>
+                </div>
             </div>
 
             <div class="container mt-5">
-                <table class="table" id="table_1">
+                <h3 class="mt-5" style="color: #0c2e8a;">Cards:</h3>
+                <table class="table table_1" id="table_1">
                     <tr class="table-light">
                         <td>Cardholder</td>
                         <td>Number</td>
@@ -102,23 +111,23 @@
             </div>
 
         </main>
+        <footer>
+            <div class="contacto d-flex justify-content-around align-items-center">
+                <div class="d-flex ">
+                    <p class="pt-2 mb-0">Hecho por -Galarza Alexis-</p>
+                    <a class="contactIco ps-2" href="">
+                        <i class='bx bxl-github fs-2 pt-2'></i>
+                    </a>
+                    <a class="contactIco ps-2" href="">
+                        <i class='bx bxl-linkedin-square fs-2 pt-2'></i>
+                    </a>
+                </div>
+                <p class="">&copy; todos los derechos reservados</p>
+                <p class="">Cohort -30 Full Stack Java- 2022</p>
+            </div>
+        </footer>
     </div>
 
-    <footer>
-        <div class="copy">
-            <div class="contacto d-flex justify-content-evenly">
-                <p class="pt-1">Hecho por -Galarza Alexis-</p>
-                <a class="contactIco" href="">
-                    <i class='bx bxl-github fs-2'></i>
-                </a>
-                <a class="contactIco" href="">
-                    <i class='bx bxl-linkedin-square fs-2'></i>
-                </a>
-            </div>
-            <p>&copy; todos los derechos reservados</p>
-            <p class="pt-2">Cohort -30 Full Stack Java- 2022</p>
-        </div>
-    </footer>
 
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"

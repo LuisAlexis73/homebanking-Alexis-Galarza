@@ -35,17 +35,17 @@ body{
 }
 
 .register{
+    background-color: #fff;
     display: flex;
     justify-content: space-between;
 }
 
 .backgroundImage{
-    /* height: 80vh; */
     background-image: url(../img/4.jpg);
 }
 
 .background-image-register{
-    height: 85vh;
+    min-height: 85vh;
     background-image: url(../img/fondo-register.jpg);
     background-position: center;
 }
@@ -53,24 +53,22 @@ body{
 .welcome{
     text-align: center;
     color: #181818;
+    margin-bottom: 0;
 }
 
 .registerTitle{
     text-align: center;
     color: #181818;
-}
-
-main{
-    min-height: 85vh;
-}
-
-footer{
-    height: 7vh;
+    margin-bottom: 0;
 }
 
 @media(max-width: 767px){
     .backgroundImage{
         height: 80vh;
+    }
+
+    .background-image-register{
+        height: 85vh;
     }
 }
 
@@ -78,9 +76,9 @@ footer{
     .backgroundImage{
         height: 85vh;
     }
-    main{
+    /* main{
         min-height: 85vh;
-    }
+    } */
     .logo{
         margin-right: -30px;
     }
