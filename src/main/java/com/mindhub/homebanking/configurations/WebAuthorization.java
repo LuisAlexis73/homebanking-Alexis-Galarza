@@ -19,17 +19,17 @@ public class WebAuthorization extends WebSecurityConfigurerAdapter{
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                .antMatchers(HttpMethod.POST, "/api/clients").permitAll()
+                .antMatchers("/api/clients", "/api/accounts", "/web/manager.html").hasAuthority("ADMIN")
 
                 .antMatchers(HttpMethod.POST, "/api/clients", "/api/**","/web/login.html", "/web/register.html", "/web/assets-index/**",
-                        "/web/assets/**", "/web/reveal/**", "/web/**", "/api/loans").permitAll()
+                        "/web/assets/**", "/web/reveal/**", "/web/**", "/api/loans").hasAuthority("ADMIN")
 
-                .antMatchers(HttpMethod.PATCH, "/api/clients/current/accounts/remove").hasAnyAuthority("CLIENT","ADMIN")
+                .antMatchers(HttpMethod.PATCH, "/api/clients/current/accounts/remove").hasAnyAuthority("ADMIN")
 
                .antMatchers("/web/login.html",  "/web/register.html", "/web/assets-index/**",
-                       "/web/assets/**", "/web/reveal/**", "/web/**", "/api/clients/current", "/api/loans").permitAll()
+                       "/web/assets/**", "/web/reveal/**", "/web/**").permitAll()
 
-                .antMatchers("/rest/**", "/h2-console", "/manager.html", "/web/**").hasAuthority("ADMIN")
+                .antMatchers("/rest/**", "/h2-console", "/web/manager.html", "/web/**").hasAuthority("ADMIN")
 
                 .antMatchers("/web/**").hasAnyAuthority("CLIENT", "ADMIN");
 
