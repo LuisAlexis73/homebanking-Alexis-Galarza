@@ -2,230 +2,239 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>| Loans</title>
-    <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
-    <!-- Box Icons -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>| Loans</title>
+	<link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
+	<!-- Box Icons -->
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+	<!-- CSS only -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
-    <!-- Google fonts -->
-    <link
-        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700"
-        rel="stylesheet">
+	<!-- Google fonts -->
+	<link
+		href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700"
+		rel="stylesheet">
 
-    <!-- my CSS -->
-    <link rel="stylesheet" href="./assets/css/style.css">
+	<!-- my CSS -->
+	<link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
-    <div id="app">
-        <header>
-            <div class="logo">
-                <a href="./reveal/index.html">
-                    <img class="mx-4" src="./assets/img/brand.jpg" alt="Logo bank brothers">
-                </a>
-            </div>
+	<div id="app">
+		<header class="d-flex justify-content-between">
+			<div class="logo">
+				<a href="./reveal/index.html">
+					<img class="mx-4" src="./assets/img/brand.jpg" alt="Logo bank brothers">
+				</a>
+			</div>
 
-            <nav class="navbar navbar-expand-lg mx-4 mt-4">
-                <div class="container-fluid">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link navbar-brand" aria-current="page" href="./accounts.html">Accounts</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link navbar-brand" href="create-cards.html">Create cards</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link navbar-brand" href="cards.html">Cards</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="btn-primary nav-link navbar-brand" data-bs-toggle="modal"
-                                    href="#exampleModalToggle">Transfers</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="log_out" @click="logOut">
-                                    <!-- <img class="desloguear" src="./assets/img/pngegg.png"> -->
-                                    <i class='bx bx-log-out-circle fs-2'></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </header>
+			<nav class="navbar navbar-expand-md navbar-light">
+				<div class="container-fluid">
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+						aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+						<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+							<li class="nav-item">
+								<a class="nav-link navbar-brand" aria-current="page" href="./accounts.html">Accounts</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link navbar-brand" href="create-cards.html">Create cards</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link navbar-brand" href="cards.html">Cards</a>
+							</li>
+							<li class="nav-item">
+								<a class="btn-primary nav-link navbar-brand" data-bs-toggle="modal"
+									href="#exampleModalToggle">Transfers</a>
+							</li>
+							<li class="nav-item">
+								<a class="log_out" @click="logOut">
+									<!-- <img class="desloguear" src="./assets/img/pngegg.png"> -->
+									<i class='bx bx-log-out-circle fs-2'></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
 
-        <main>
-            <h4 class="titulo text-center py-3 bg-body">APPLY FOR A LOAN</h4>
-            <div class="container">
-                <div class="row mx-auto" style="width: 50%;">
-                    <span>Select your loan</span>
-                    <select class="mt-3" v-model="loanId">
-                        <option v-for="loan in loans" :value="loan.id">{{loan.name}}</option>
-                    </select>
+		<main>
+			<h3 class="titulo text-center py-3 bg-body">APPLY FOR A LOAN</h3>
+			<div class="container">
+				<div class="d-flex flex-column">
+					<div class="mt-3">
+						<h6 class="text-center">Select your loan</h6>
+						<select v-model="loanId" class="form-select form-select-lg w-50 mx-auto">
+							<option v-for="loan in loans" :value="loan.id">{{loan.name}}</option>
+						</select>
+					</div>
 
-                    <select class="mt-3" v-if="loanId" v-model="loanPays">
-                        <option>Payments</option>
-                        <option v-for="payment in loans.filter(l=>l.id == loanId)[0].payments" :value="payment">
-                            {{payment}}</option>
-                    </select>
+					<div class="mt-3">
+						<select v-if="loanId" v-model="loanPays" class="form-select form-select-lg w-50 mx-auto">
+							<option>Payments</option>
+							<option v-for="payment in loans.filter(l=>l.id == loanId)[0].payments" :value="payment">
+								{{payment}}</option>
+						</select>
+					</div>
 
-                    <input class="mt-3" v-model="amount" type="number" placeholder="amount">
+					<div class="mb-3 w-50 mx-auto">
+						<label class="form-label">Amount:</label>
+						<input class="form-control" v-model="amount" type="number" placeholder="amount">
+					</div>
 
-                    <select v-model="accountDestiny" class=" mb-3 mt-3"
-                        aria-label="example">
-                        <option v-for="account in accounts" :value="account.number">{{account.number}}</option>
-                    </select>
+					<div class="mt-3">
+						<select v-model="accountDestiny" class="form-select form-select-lg w-50 mx-auto">
+							<option v-for="account in accounts" :value="account.number">{{account.number}}</option>
+						</select>
+					</div>
 
-                    <div class="mt-3" v-show="loanPays != 0">
-                        <h3>payments: ${{(amount * 1.20) / loanPays}}</h3>
-                        <h3>Total : ${{amount * 1.20}}</h3>
-                    </div>
-                </div>
-            </div>
+					<div class="mt-3" v-show="loanPays != 0">
+						<h3>payments: ${{(amount * 1.20) / loanPays}}</h3>
+						<h3>Total : ${{amount * 1.20}}</h3>
+					</div>
+				</div>
+				<button type="button" class="btn btn-success me-3" data-bs-toggle="modal" data-bs-target="#exampleModal"
+					v-if="loanId == false || amount <= 0" disabled>
+					loan petition
+				</button>
 
-            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                v-if="loanId == false || amount <= 0" disabled >
-                loan petition
-            </button>
+				<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" v-else>
+					loan petition
+				</button>
+			</div>
 
-            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" v-else >
-            loan petition
-            </button>
+			<div class="container mt-4">
+				<h2 class="mt-3" v-if="loans.length == 0">No loans for now.</h2>
+				<h3 class="pt-2">Your Loans</h3>
+				<table class="table table_2">
+					<tr class="table-light">
+						<td>Name of loan apply</td>
+						<td>Amount to pay</td>
+						<td>Payments</td>
+					</tr>
+					<tr v-for="loan in clientLoans">
+						<td>{{loan.name}}</td>
+						<td>$ {{loan.amount}} </td>
+						<td>{{loan.payments}}</td>
+					</tr>
+				</table>
+			</div>
 
-            <div class="container">
-                <h2 class="mt-3" v-if="loans.length == 0">No loans for now.</h2>
-                <h3 class="titulo mt-5">Your Loans</h3>
-                <table class="table table_2">
-                    <tr class="table-light">
-                        <td>Name of loan apply</td>
-                        <td>Amount to pay</td>
-                        <td>Payments</td>
-                    </tr>
-                    <tr v-for="loan in clientLoans">
-                        <td>{{loan.name}}</td>
-                        <td>$ {{loan.amount}} </td>
-                        <td>{{loan.payments}}</td>
-                    </tr>
-                </table>
-            </div>
+			<!-- Modal Loan -->
 
-            <!-- Modal Loan -->
+			<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLabel">Attention!</h5>
+							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						</div>
+						<div class="modal-body">
+							<h4 class="text-bg-warning text-center p-2">Are you sure to accept the loan?!</h4>
+							<p>Amount to pay: $ {{amount}}</p>
+							<p>Installments to pay: {{loanPays}}</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+							<button type="button" class="btn btn-success" @click="loanPetition">Agree</button>
+						</div>
+					</div>
+				</div>
+			</div>
 
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Attention!</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <h4 class="text-bg-warning text-center p-2">Are you sure to accept the loan?!</h4>
-                            <p>Amount to pay: $ {{amount}}</p>
-                            <p>Installments to pay: {{loanPays}}</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
-                            <button type="button" class="btn btn-success" @click="loanPetition">Agree</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+			<!-- Modal Transfer -->
 
-            <!-- Modal Transfer -->
+			<div class="container">
+				<div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+					tabindex="-1">
+					<div class="modal-dialog modal-dialog-centered">
+						<div class="modal-content">
+							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							<div class="modal-header">
+								<h3 class="modal-title" id="exampleModalToggleLabel">Please choose your own account or a
+									third party account</h3>
+							</div>
+							<div class="modal-body">
+								<P>to be able to transfer to third parties you must enter the corresponding account</P>
+							</div>
+							<div class="modal-footer">
+								<div class="d-flex">
+									<a class="btn btn-info" href="./transfers.html">Own Account</a>
+									<a class="btn btn-info" href="./someoneTranser.html">Someone Account</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
+					tabindex="-1">
+					<div class="modal-dialog modal-dialog-centered">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							</div>
+							<div class="modal-body">
+								Hide this modal and show the first with the button below.
+							</div>
+							<div class="modal-footer">
+								<button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Back to
+									first</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
 
-            <div class="container">
-                <div class="modal fade" id="exampleModalToggle" aria-hidden="true"
-                    aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            <div class="modal-header">
-                                <h3 class="modal-title" id="exampleModalToggleLabel">Please choose your own account or a
-                                    third party account</h3>
-                            </div>
-                            <div class="modal-body">
-                                <P>to be able to transfer to third parties you must enter the corresponding account</P>
-                            </div>
-                            <div class="modal-footer">
-                                <div class="d-flex">
-                                    <a class="btn btn-info" href="./transfers.html">Own Account</a>
-                                    <a class="btn btn-info" href="./someoneTranser.html">Someone Account</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal fade" id="exampleModalToggle2" aria-hidden="true"
-                    aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                Hide this modal and show the first with the button below.
-                            </div>
-                            <div class="modal-footer">
-                                <button class="btn btn-primary" data-bs-target="#exampleModalToggle"
-                                    data-bs-toggle="modal">Back to first</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </main>
-    </div>
+		<footer class="d-flex justify-content-around align-items-center py-2">
+			<p class="mb-0">Hecho por - <strong>Galarza Alexis</strong> - </p>
+			<p class="mb-0">&copy; -{{anio}}- todos los derechos reservados</p>
+			<div class="justify-content-between">
+				<a class="contactIco" href="https://github.com/LuisAlexis73" target="_blank" rel="noopener noreferrer">
+					<i class='bx bxl-github fs-2 pt-2'></i>
+				</a>
+				<a class="contactIco" href="https://www.linkedin.com/in/luis-alexis-galarza/" target="_blank"
+					rel="noopener noreferrer">
+					<i class='bx bxl-linkedin-square fs-2 pt-2'></i>
+				</a>
+				<a class="contactIco" href="https://www.instagram.com/luis_alexis73/" target="_blank" rel="noopener noreferrer">
+					<i class="bx bxl-instagram fs-2 pt-2"></i>
+				</a>
+				<a class="contactIco" href="mailTo:la.galarza@outlook.com" target="_blank" rel="noopener noreferrer">
+					<i class="bx bxs-envelope fs-2 pt-2"></i>
+				</a>
+			</div>
+		</footer>
+	</div>
 
-    <footer>
-        <div class="copy">
-            <div class="contacto d-flex justify-content-evenly">
-                <p class="pt-1">Hecho por -Galarza Alexis-</p>
-                <a class="contactIco" href="">
-                    <i class='bx bxl-github fs-2'></i>
-                </a>
-                <a class="contactIco" href="">
-                    <i class='bx bxl-linkedin-square fs-2'></i>
-                </a>
-            </div>
-            <p>&copy; todos los derechos reservados</p>
-            <p class="pt-2">Cohort -30 Full Stack Java- 2022</p>
-        </div>
-    </footer>
 
-    <!-- Axios -->
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<!-- Axios -->
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
-    <!-- Sweet Alert -->
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	<!-- Sweet Alert -->
+	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-    <!-- Vue -->
-    <script src="https://unpkg.com/vue@3"></script>
+	<!-- Vue -->
+	<script src="https://unpkg.com/vue@3"></script>
 
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-        crossorigin="anonymous"></script>
+	<!-- JavaScript Bundle with Popper -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+		crossorigin="anonymous"></script>
 
-        <!-- My Script -->
-    <script src="./assets/js/loan-application.js"></script>
+	<!-- My Script -->
+	<script src="./assets/js/loan-application.js"></script>
 </body>
 
 </html>

@@ -17,6 +17,7 @@ const app = Vue.createApp({
       someoneSelectAccountDestiny: "",
       someoneSelectAmount: "",
       someoneSelectDescription: "",
+      anio: ""
     };
   },
 
@@ -26,6 +27,8 @@ const app = Vue.createApp({
       .then((response) => {
         this.cards = response.data.cards;
         this.accounts = response.data.accounts;
+
+        this.anio = new Date().getFullYear();
       })
       .catch(function (error) {
         console.log(error);
@@ -46,7 +49,7 @@ const app = Vue.createApp({
         if (result.isConfirmed) {
           axios.post("/api/logout")
             .then(response => location.href = "./reveal/index.html")
-            .catch(function (error){
+            .catch(function (error) {
               alert(error)
             })
         }
@@ -57,7 +60,7 @@ const app = Vue.createApp({
       axios.post(
         "/api/transactions",
         `amount=${this.selectAmount}&description=${this.selectDescription}&accountOrigin=${this.selectAccountOrigin}&accountDestiny=${this.selectAccountDestiny}`,
-        {headers:{'content-type': 'application/x-www-form-urlencoded'}}
+        { headers: { 'content-type': 'application/x-www-form-urlencoded' } }
       )
         .then((respone) =>
           Swal.fire({

@@ -12,6 +12,7 @@ const app = Vue.createApp({
       loanPays: "",
       amount: null,
       accountDestiny: "",
+      anio: ""
     };
   },
 
@@ -22,6 +23,8 @@ const app = Vue.createApp({
         this.allData(response);
         this.clientLoans = response.data.clientLoans;
         console.log(this.clientLoans);
+
+        this.anio = new Date().getFullYear();
       })
       .catch((error) => {
         console.log(error);
@@ -69,7 +72,7 @@ const app = Vue.createApp({
         if (result.isConfirmed) {
           axios.post("/api/logout")
             .then(response => location.href = "./reveal/index.html")
-            .catch(function (error){
+            .catch(function (error) {
               alert(error)
             })
         }
@@ -78,7 +81,7 @@ const app = Vue.createApp({
 
     loanPetition() {
       axios
-        .post("/api/loans",{
+        .post("/api/loans", {
           id: `${this.loanId}`,
           amount: `${this.amount}`,
           payments: `${this.loanPays}`,
@@ -92,21 +95,21 @@ const app = Vue.createApp({
               text: "the loan was requested successfully",
               timer: 1500,
             }),
-            setTimeout(() => {location.href= "/web/accounts.html"}, 1500)
+          setTimeout(() => { location.href = "/web/accounts.html" }, 1500)
         )
         .catch((error) => {
           Swal.fire({
-              icon: 'error',
-              showConfirmButton: true,
-              text: `${error.response.data}`
+            icon: 'error',
+            showConfirmButton: true,
+            text: `${error.response.data}`
           })
-      });
+        });
     },
   },
 
   computed: {
-    interestPerPayments(){
-      switch(this.loans){
+    interestPerPayments() {
+      switch (this.loans) {
 
       }
     }

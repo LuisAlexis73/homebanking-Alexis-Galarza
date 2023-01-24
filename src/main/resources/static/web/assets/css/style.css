@@ -1,226 +1,252 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Open Sans", sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Open Sans", sans-serif;
 }
 
 body {
-    background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+	background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
 }
 
-main{
-    min-height: 85vh;
+main {
+	min-height: 85vh;
 }
 
 .logo {
-    display: inline-block;
+	display: inline-block;
+	padding: 0.8rem 0;
 }
 
 .logo img {
-    width: 20rem;
-    height: 3.5rem;
-    margin-bottom: .5rem;
+	width: 20rem;
+	height: 3.5rem;
+	margin-bottom: .5rem;
 }
 
 .log_out {
-    text-decoration: none;
-    cursor: pointer;
-    color: black;
+	text-decoration: none;
+	cursor: pointer;
+	color: black;
 }
 
 .log_out>i {
-    width: 2rem;
-    transition: transform .2s;
+	width: 2rem;
+	transition: transform .2s;
 }
 
 .log_out>i:hover {
-    transform: scale(1.1);
-    background-color: crimson;
-    border-radius: 360px;
-    color: white;
-}
-
-.navbar {
-    float: right;
+	transform: scale(1.1);
+	background-color: crimson;
+	border-radius: 360px;
+	color: white;
 }
 
 .titulo {
-    margin-top: 1.5rem;
-    color: #0c2e8a;
+	font-family: Verdana, sans-serif;
+	font-weight: bold;
+	padding-top: 2.5rem;
+	color: #0c2e8a;
+	/* text-shadow: 1px 2px 3px #212529; */
+	text-shadow: 1px 2px 4px #558abbb2;
 }
 
 .navbar-brand:hover {
-    color: #50d8af;
+	color: #50d8af;
 }
 
 .formulario {
-    width: 80%;
-    margin-inline: auto;
+	width: 80%;
+	margin-inline: auto;
 }
 
-.shadow{
-    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px !important;
+.shadow {
+	box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px !important;
 }
 
 table {
-    width: 60%;
-    margin: auto;
+	width: 60%;
+	margin: auto;
 }
 
 .table_2 {
-    margin-top: 2rem;
+	margin-top: 2rem;
 }
 
 .table_1 {
-    margin-top: 1.5rem;
+	margin-top: 1.5rem;
 }
 
 .btn {
-    float: right;
-    margin-right: 6rem;
+	float: right;
 }
 
 .btn_create_account {
-    font-size: 20px;
-    border-radius: 5px;
-    padding: 8px;
-    background-color: rgba(0, 148, 44, 0.719);
-    color: rgb(0, 0, 0);
-    border: none;
-    transition: transform .3s;
+	font-size: 20px;
+	border-radius: 5px;
+	padding: 8px;
+	background-color: rgba(0, 148, 44, 0.719);
+	color: rgb(0, 0, 0);
+	border: none;
+	transition: transform .3s;
 }
 
 .btn_create_account:hover {
-    background-color: rgb(23, 138, 23);
-    color: rgb(255, 255, 255);
-    transform: scale(1.1);
+	background-color: rgb(23, 138, 23);
+	color: rgb(255, 255, 255);
+	transform: scale(1.1);
 }
 
 .btn_delete_account {
-    font-size: 20px;
-    border-radius: 5px;
-    padding: 8px;
-    background-color: rgba(161, 3, 3, 0.719);
-    color: rgb(0, 0, 0);
-    border: none;
-    transition: transform .3s;
+	font-size: 20px;
+	border-radius: 5px;
+	padding: 8px;
+	background-color: rgba(161, 3, 3, 0.719);
+	color: rgb(0, 0, 0);
+	border: none;
+	transition: transform .3s;
 }
 
 .btn_delete_account:hover {
-    background-color: rgb(201, 0, 0);
-    color: rgb(255, 255, 255);
-    transform: scale(1.1);
+	background-color: rgb(201, 0, 0);
+	color: rgb(255, 255, 255);
+	transform: scale(1.1);
 }
 
 .create_card {
-    font-size: 20px;
-    text-decoration: none;
-    padding: 5px;
-    border-radius: 5px;
-    background-color: #50d8af;
-    color: rgb(255, 255, 255);
-    transition: transform .2s;
+	font-size: 20px;
+	text-decoration: none;
+	padding: 5px;
+	border-radius: 5px;
+	background-color: #50d8af;
+	color: rgb(255, 255, 255);
+	transition: transform .2s;
 }
 
 .create_card:hover {
-    background-color: rgb(6, 158, 6);
-    color: rgb(255, 255, 255);
-    transform: scale(1.1);
+	background-color: rgb(6, 158, 6);
+	color: rgb(255, 255, 255);
+	transform: scale(1.1);
 }
 
 .contenedor_tabla_cards {
-    margin-top: 4rem;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.contenedor_inputs {
-    width: 50%;
-    margin-inline: auto;
-}
-
-select {
-    width: 10rem;
-    height: 1.8rem;
-    border-color: darkblue;
-    border-top: none;
-    border-right: none;
+	margin-top: 4rem;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .inputs_transfers>input {
-    height: 2.5rem;
-    width: 15rem;
-    border-color: darkblue;
-    border-left: none;
-    border-bottom: none;
+	height: 2.5rem;
+	width: 15rem;
+	border-color: darkblue;
+	border-left: none;
+	border-bottom: none;
 }
 
 .ir_a_account {
-    color: black;
-    text-decoration: none;
+	color: black;
+	text-decoration: none;
 }
 
 .cards_button {
-    text-decoration: none;
-    color: black;
-    float: right;
+	text-decoration: none;
+	color: black;
+	float: right;
 }
 
 .btnCreateCard {
-    color: rgb(255, 255, 255);
-    background-color: #50d8af;
-    margin-top: 1rem;
-    border-radius: 15px;
-    border: none;
-    padding: .5rem;
-    transition: all ease-out .3s;
+	color: rgb(255, 255, 255);
+	background-color: #50d8af;
+	margin-top: 1rem;
+	border-radius: 15px;
+	border: none;
+	padding: .5rem;
+	transition: all ease-out .3s;
 }
 
 .btnCreateCard:hover {
-    color: rgb(0, 0, 0);
-    background-color: rgba(38, 185, 12, 0.769);
-    text-transform: uppercase;
-    transform: scale(1.1);
+	color: rgb(0, 0, 0);
+	background-color: rgba(38, 185, 12, 0.769);
+	text-transform: uppercase;
+	transform: scale(1.1);
 }
 
+.footer-card {
+	padding-top: 4.5rem;
+}
+
+.card-text {
+	margin-bottom: 0 !important;
+}
 
 .contactIco {
-    text-decoration: none;
-    color: #50d8af;
-    transition: transform .2s;
+	text-decoration: none;
+	margin-left: .5rem;
+	color: #50d8af;
+	transition: all .2s ease-in;
 }
 
 .contactIco:hover {
-    color: #0c2e8a;
-    transform: scale(1.1);
+	color: #0c2e8a;
+	transform: scale(1.1);
 }
 
-.contacto>p{
-    margin-bottom: 0;
+footer {
+	background-color: #f2f5f8;
+	text-align: center;
 }
 
 /* MEDIAQUERIES */
 
-@media (min-width: 320px) {
+@media (max-width: 425px) {
 
-    .btn {
-        margin-right: 2rem;
-    }
+	.logo {
+		display: none;
+	}
 
-    .boton_modal {
-        margin: 1rem auto;
-    }
+	.btn {
+		margin-right: 2rem;
+	}
 
-    footer {
-        background-color: #f2f5f8;
-        text-align: center;
-        padding: .5rem auto;
-    }
+	.boton_modal {
+		margin: 1rem auto;
+	}
 
-    /* .contacto{
-        flex-direction: column;
-        padding-top: .5rem;
-    } */
+	.card-responsive {
+		flex-wrap: wrap;
+	}
+
+	.footer-card {
+		padding-top: 2rem;
+	}
+
+	footer {
+		flex-direction: column;
+		margin-top: .5rem;
+	}
+
+	footer>p {
+		padding: .5rem;
+	}
+}
+
+@media (max-width: 768px) {
+
+	header {
+		flex-direction: column;
+	}
+
+	.card-responsive {
+		flex-direction: column;
+	}
+
+	footer {
+		flex-direction: column;
+		margin-top: .5rem;
+	}
+
+	footer>p {
+		padding: .5rem;
+	}
 }

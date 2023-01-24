@@ -7,6 +7,7 @@ createApp({
       firstName: "",
       lastName: "",
       email: "",
+      anio: ""
     };
   },
 
@@ -29,7 +30,7 @@ createApp({
         if (result.isConfirmed) {
           axios.post("/api/logout")
             .then(response => location.href = "./reveal/index.html")
-            .catch(function (error){
+            .catch(function (error) {
               alert(error)
             })
         }
@@ -43,22 +44,24 @@ createApp({
           lastName: this.lastName,
           email: this.email,
         })
-        .then(()=> this.addClient())
+        .then(() => this.addClient())
         .catch(function (error) {
           console.log(error);
         });
     },
 
-    loadData(){
+    loadData() {
       axios
-      .get("/api/clients")
-      .then((response) => {
-        this.clients = response.data;
-        console.log(this.clients);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
+        .get("/api/clients")
+        .then((response) => {
+          this.clients = response.data;
+          console.log(this.clients);
+
+          this.anio = new Date().getFullYear();
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
     }
   },
 }).mount("#app");

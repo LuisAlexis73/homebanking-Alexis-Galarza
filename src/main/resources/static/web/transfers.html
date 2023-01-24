@@ -2,191 +2,189 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>| Transfers</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>| Transfers</title>
 
-    <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
-    <!-- Box Icons -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
+	<!-- Box Icons -->
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-    <!-- Sweet alert -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+	<!-- Sweet alert -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
-    <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+	<!-- CSS only -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
-    <!-- Google fonts -->
-    <link
-        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700"
-        rel="stylesheet">
+	<!-- Google fonts -->
+	<link
+		href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700"
+		rel="stylesheet">
 
-    <!-- my CSS -->
-    <link rel="stylesheet" href="./assets/css/style.css">
+	<!-- my CSS -->
+	<link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
-    <div id="app">
-        <header>
-            <div class="logo">
-                <a href="./reveal/index.html">
-                    <img class="mx-4" src="./assets/img/brand.jpg" alt="Logo bank brothers">
-                </a>
-            </div>
-            <nav class="navbar navbar-expand-lg">
-                <div class="container-fluid">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link navbar-brand" aria-current="page" href="./reveal/index.html">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link navbar-brand" href="accounts.html">Accounts</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="log_out" @click="logOut">
-                                    <!-- <img class="desloguear" src="./assets/img/pngegg.png"> -->
-                                    <i class='bx bx-log-out-circle fs-2'></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </header>
+	<div id="app">
+		<header class="d-flex align-items-center justify-content-between">
+			<div class="logo">
+				<a href="./reveal/index.html">
+					<img class="mx-4" src="./assets/img/brand.jpg" alt="Logo bank brothers">
+				</a>
+			</div>
+			<nav class="navbar navbar-expand-lg">
+				<div class="container-fluid">
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+						aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+						<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+							<li class="nav-item">
+								<a class="nav-link navbar-brand" href="accounts.html">Back to Accounts</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link navbar-brand" href="./loan-application.html">Loans</a>
+							</li>
+							<li class="nav-item">
+								<a class="log_out" @click="logOut">
+									<!-- <img class="desloguear" src="./assets/img/pngegg.png"> -->
+									<i class='bx bx-log-out-circle fs-2'></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
 
-        <main>
-            <h4 class="titulo text-center py-3 bg-body text-success">TRANSFERS OWNER</h4>
-            <!-- TRANSFER OWNER -->
-            <div class="container mt-3">
-                <div class="container d-flex flex-column">
-                    <span
-                        v-show="selectAccountOrigin == false || selectAccountDestiny == false || selectAmount <= 0 || selectDescription == ''"
-                        class="alert alert-danger" role="alert">Please complete all fields</span>
-                    <div class="container contenedor_inputs">
-                        <div class="mt-2">
-                            <div class="mb-3">
-                                <h6>Select your account:</h6>
-                                <select v-model="selectAccountOrigin">
-                                    <option v-for="account in accounts" v-show="account.number != selectAccountDestiny"
-                                        :value="account.number">{{account.number}}</option>
-                                </select>
-                            </div>
-                        </div>
+		<main>
+			<h3 class="titulo text-center py-3 bg-body">TRANSFERS OWNER</h3>
+			<!-- TRANSFER OWNER -->
+			<div class="container mt-3">
+				<div class="d-flex flex-column">
+					<span
+						v-show="selectAccountOrigin == false || selectAccountDestiny == false || selectAmount <= 0 || selectDescription == ''"
+						class="alert alert-danger" role="alert">Please complete all fields</span>
+					<div class="container">
+						<div class="mb-3">
+							<h6 class="text-center">Select your account:</h6>
+							<select v-model="selectAccountOrigin" class="form-select form-select-lg w-50 mx-auto">
+								<option v-for="account in accounts" v-show="account.number != selectAccountDestiny"
+									:value="account.number">{{account.number}}</option>
+							</select>
+						</div>
 
-                        <div>
-                            <h6>Select account destiny:</h6>
-                            <div class="mb-3">
-                                <select v-model="selectAccountDestiny">
-                                    <option v-for="account in accounts" v-show="account.number != selectAccountOrigin"
-                                        :value="account.number">{{account.number}}</option>
-                                </select>
-                            </div>
-                        </div>
+						<div class="mb-3">
+							<h6 class="text-center">Select account destiny:</h6>
+							<select v-model="selectAccountDestiny" class="form-select form-select-lg w-50 mx-auto">
+								<option v-for="account in accounts" v-show="account.number != selectAccountOrigin"
+									:value="account.number">{{account.number}}
+								</option>
+							</select>
+						</div>
 
-                        <label class="form-label">Amount:</label>
-                        <div class="mb-3 inputs_transfers">
-                            <input v-model="selectAmount" type="number" placeholder="$0.00">
-                        </div>
+						<div class="mb-3 w-50 mx-auto">
+							<label class="form-label">Amount:</label>
+							<input class="form-control" v-model="selectAmount" type="number" placeholder="$0.00">
+						</div>
 
-                        <label>Description:</label>
-                        <div class="description inputs_transfers">
-                            <input v-model="selectDescription" type="text" placeholder="A description about transfer">
-                        </div>
-                    </div>
-                </div>
+						<div class="w-50 mx-auto">
+							<label>Description:</label>
+							<textarea v-model="selectDescription" class="form-control"></textarea>
+						</div>
+					</div>
+				</div>
 
-                <div class="container-fluid">
-                    <div class="boton_modal">
-                        <!-- Button trigger modal -->
-                        <button
-                            v-if="selectAccountOrigin == false || selectAccountDestiny == false || selectAmount <= 0 || selectDescription == ''"
-                            disabled type="button" class="btn btn-primary" data-bs-toggle="modal"
-                            data-bs-target="#staticBackdrop">
-                            Send transfer
-                        </button>
+				<div class="container-fluid">
+					<div class="boton_modal">
+						<!-- Button trigger modal -->
+						<button
+							v-if="selectAccountOrigin == false || selectAccountDestiny == false || selectAmount <= 0 || selectDescription == ''"
+							disabled type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+							Send transfer
+						</button>
 
-                        <button v-else type="button" class="btn btn-primary" data-bs-toggle="modal"
-                            data-bs-target="#staticBackdrop">
-                            Send transfer
-                        </button>
-                    </div>
+						<button v-else type="button" class="btn btn-primary" data-bs-toggle="modal"
+							data-bs-target="#staticBackdrop">
+							Send transfer
+						</button>
+					</div>
 
-                    <!-- Modal -->
-                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
-                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <h6>Transfer from: </h6>
-                                    <p>{{selectAccountOrigin}}</p>
-                                    <hr>
-                                    <p class="text-bg-warning text-center p-2">¿are you sure to transfer to this
-                                        account?</p>
-                                    <p>{{selectAccountDestiny}}</p>
-                                    <p>Amount: {{selectAmount}}</p>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                                    <button @click="transactionOwnAccount" type="button" class="btn btn-primary">Send
-                                        Transfer</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div><!-- END TRNASFER OWNER -->
-            {{filterNameMatchIdOwnAccount}}
-        </main>
+					<!-- Modal -->
+					<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+						aria-labelledby="staticBackdropLabel" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+								</div>
+								<div class="modal-body">
+									<h6>Transfer from: </h6>
+									<p>{{selectAccountOrigin}}</p>
+									<hr>
+									<p class="text-bg-warning text-center p-2">¿are you sure to transfer to this
+										account?</p>
+									<p>{{selectAccountDestiny}}</p>
+									<p>Amount: {{selectAmount}}</p>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+									<button @click="transactionOwnAccount" type="button" class="btn btn-primary">Send
+										Transfer</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><!-- END TRNASFER OWNER -->
+			{{filterNameMatchIdOwnAccount}}
+		</main>
 
-        <footer>
-            <div class="copy">
-                <div class="contacto d-flex justify-content-evenly">
-                    <p class="pt-1">Hecho por -Galarza Alexis-</p>
-                    <a class="contactIco" href="">
-                        <i class='bx bxl-github fs-2'></i>
-                    </a>
-                    <a class="contactIco" href="">
-                        <i class='bx bxl-linkedin-square fs-2'></i>
-                    </a>
-                </div>
-                <p>&copy; todos los derechos reservados</p>
-                <p class="pt-2">Cohort -30 Full Stack Java- 2022</p>
-            </div>
-        </footer>
+		<footer class="d-flex justify-content-around align-items-center py-2">
+			<p class="mb-0">Hecho por - <strong>Galarza Alexis</strong> - </p>
+			<p class="mb-0">&copy; -{{anio}}- todos los derechos reservados</p>
+			<div class="justify-content-between">
+				<a class="contactIco" href="https://github.com/LuisAlexis73" target="_blank" rel="noopener noreferrer">
+					<i class='bx bxl-github fs-2 pt-2'></i>
+				</a>
+				<a class="contactIco" href="https://www.linkedin.com/in/luis-alexis-galarza/" target="_blank"
+					rel="noopener noreferrer">
+					<i class='bx bxl-linkedin-square fs-2 pt-2'></i>
+				</a>
+				<a class="contactIco" href="https://www.instagram.com/luis_alexis73/" target="_blank" rel="noopener noreferrer">
+					<i class="bx bxl-instagram fs-2 pt-2"></i>
+				</a>
+				<a class="contactIco" href="mailTo:la.galarza@outlook.com" target="_blank" rel="noopener noreferrer">
+					<i class="bx bxs-envelope fs-2 pt-2"></i>
+				</a>
+			</div>
+		</footer>
 
-        <span class="loader"></span>
+		<span class="loader"></span>
 
-    </div>
-    <!-- Axios -->
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	</div>
+	<!-- Axios -->
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
-    <!-- Vue -->
-    <script src="https://unpkg.com/vue@3"></script>
+	<!-- Vue -->
+	<script src="https://unpkg.com/vue@3"></script>
 
-    <!-- Sweet Alert -->
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	<!-- Sweet Alert -->
+	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-        crossorigin="anonymous"></script>
+	<!-- JavaScript Bundle with Popper -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+		crossorigin="anonymous"></script>
 
-        <!-- My Sccript -->
-    <script src="./assets/js/transfer.js"></script>
+	<!-- My Sccript -->
+	<script src="./assets/js/transfer.js"></script>
 
 </body>
 

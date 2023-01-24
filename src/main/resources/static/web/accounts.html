@@ -2,249 +2,247 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>| Accounts</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>| Accounts</title>
 
-    <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
+	<link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
 
-    <!-- Box Icons -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	<!-- Box Icons -->
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-    <!-- Sweet alert -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+	<!-- Sweet alert -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
-    <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+	<!-- CSS only -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
-    <!-- Google fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700"
-        rel="stylesheet">
+	<!-- Google fonts -->
+	<link
+		href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700"
+		rel="stylesheet">
 
-    <!-- my CSS -->
-    <link rel="stylesheet" href="./assets/css/style.css">
+	<!-- my CSS -->
+	<link rel="stylesheet" href="./assets/css/style.css">
 
 </head>
 
 <body>
-    <div id="app">
-        <header class="d-flex align-items-center justify-content-between">
-            <div class="logo">
-                <a href="./reveal/index.html">
-                    <img class="mx-4" src="./assets/img/brand.jpg" alt="Logo bank brothers">
-                </a>
-            </div>
-            <nav class="navbar navbar-expand-lg mx-4 mt-4">
-                <div class="container-fluid">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link navbar-brand" aria-current="page" href="./reveal/index.html">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link navbar-brand" href="create-cards.html">Create cards</a>
-                            </li>
-                            <!-- <li class="nav-item">
-                                <a class="nav-link navbar-brand" href="cards.html">Cards</a>
-                            </li> -->
-                            <li class="nav-item">
-                                <a class="btn-primary nav-link navbar-brand" data-bs-toggle="modal"
-                                    href="#exampleModalToggle">Transfers</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="btn-primary nav-link navbar-brand" href="./loan-application.html">Loans</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="log_out" @click="logOut">
-                                    <!-- <img class="desloguear" src="./assets/img/pngegg.png"> -->
-                                    <i class='bx bx-log-out-circle fs-2'></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </header>
+	<div id="app">
+		<header class="d-flex justify-content-between">
+			<div class="logo">
+				<a href="./reveal/index.html">
+					<img class="mx-4" src="./assets/img/brand.jpg" alt="Logo bank brothers">
+				</a>
+			</div>
+			<nav class="navbar navbar-expand-md navbar-light">
+				<div class="container-fluid">
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+						aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+						<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+							<li class="nav-item">
+								<a class="nav-link navbar-brand" aria-current="page" href="./reveal/index.html">Home</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link navbar-brand" href="create-cards.html">Create cards</a>
+							</li>
+							<li class="nav-item">
+								<a class="btn-primary nav-link navbar-brand" data-bs-toggle="modal"
+									href="#exampleModalToggle">Transfers</a>
+							</li>
+							<li class="nav-item">
+								<a class="btn-primary nav-link navbar-brand" href="./loan-application.html">Loans</a>
+							</li>
+							<li class="nav-item">
+								<a class="log_out" @click="logOut">
+									<i class='bx bx-log-out-circle fs-2'></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
 
-        <main>
+		<main>
+			<div class="container-fluid">
+				<h3 class="titulo text-center py-3 bg-body">YOUR ACCOUNTS</h3>
 
-            <div class="container-fluid">
-                <h3 class="titulo text-center py-3 bg-body">YOUR ACCOUNTS</h3>
+				<!-- Buttons Open Modal create and delete account -->
+				<div class="container d-flex justify-content-evenly pt-4 mt-5">
+					<button type="button" class="btn_create_account" data-bs-toggle="modal" data-bs-target="#exampleModal">New
+						account</button>
 
-                <!-- Buttons Open Modal create and delete account -->
+					<button type="button" class="btn_delete_account" data-bs-toggle="modal" data-bs-target="#exampleModal2">Delete
+						account</button>
+				</div>
 
-                <div class="container d-flex justify-content-evenly pt-4">
-                    <button type="button" class="btn_create_account" data-bs-toggle="modal"
-                    data-bs-target="#exampleModal">New account</button>
+				<!-- Cards Data -->
+				<div class="container d-flex justify-content-between gap-5 mt-4 pt-4 card-responsive">
+					<div v-for="account in accounts">
+						<div class="shadow">
+							<div class="card bg-dark text-white bg-opacity-75">
+								<div class="card-body row align-items-center">
+									<div class="card-header">
+										<h5 class="text-center">Client-
+											<strong>{{clients.firstName}} {{clients.lastName}}</strong>
+										</h5>
+									</div>
+									<div class="pt-2">
+										<p class="ms-4 py-2">
+											Account Numbrer: <mark class="rounded ms-1 p-1 bg-light">{{account.number}}</mark class="">
+										</p>
+										<hr>
+									</div>
+									<div>
+										<p class="ms-4 py-2">
+											Balance: ${{account.balance}}
+										</p>
+										<hr>
+									</div>
+									<div>
+										<p class="ms-4 py-2">
+											Type Account: {{account.type}}
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div>
 
-                    <button type="button" class="btn_delete_account" data-bs-toggle="modal"
-                    data-bs-target="#exampleModal2">Delete account</button>
-                </div>
+				<!-- Modal Create Account-->
+				<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="exampleModalLabel">Choose an account type:</h5>
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							</div>
+							<div class="modal-body text-center d-flex justify-content-evenly text-uppercase">
+								<label class="mx-2" for="SAVING"><input type="radio" name="type" v-model="accountType" value="SAVING"
+										id="SAVING">Saving</label>
+								<label class="mx-2" for="CURRENT"><input type="radio" name="type" v-model="accountType" value="CURRENT"
+										id="CURRENT">Current</label>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+								<button type="button" class="btn btn-success" @click="createAccount">Acept</button>
+							</div>
+						</div>
+					</div>
+				</div>
 
-                <!-- Cards Data -->
-                <div class="container-fluid d-flex justify-content-between gap-4 mt-4 pt-4">
-                    <div v-for="account in accounts">
-                        <div class="shadow">
-                            <div class="card bg-dark text-white bg-opacity-75">
-                                <div class="card-body row">
-                                    <div class="card-header">
-                                        <h5>Name - {{clients.firstName}} {{clients.lastName}}</h5>
-                                    </div>
-                                    <div class="pt-2">
-                                        <p>Account Numbrer: {{account.number}}</p>
-                                        <hr>
-                                    </div>
-                                    <div>
-                                        <p>Balance= ${{account.balance}}</p>
-                                        <hr>
-                                    </div>
-                                    <div>
-                                        <p>Type Account: {{account.type}}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <!-- Modal Create Account-->
+				<!-- Modal Delete Account -->
+				<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="exampleModalLabel">Are you sure that you want delete this
+									account?</h5>
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							</div>
+							<div class="modal-body text-center d-flex justify-content-evenly text-uppercase">
+								<label v-for="account in accounts" class="mx-2" for="accountId"><input type="radio" name="accountId"
+										:value="account.id" v-model="accountId" id="accountId">{{account.number}}</label>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+								<button type="button" class="btn btn-success" @click="removeAccount">Deleted!</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Choose an account type:</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body text-center d-flex justify-content-evenly text-uppercase">
-                                <label class="mx-2" for="SAVING"><input type="radio" name="type" v-model="accountType"
-                                        value="SAVING" id="SAVING">Saving</label>
-                                <label class="mx-2" for="CURRENT"><input type="radio" name="type" v-model="accountType"
-                                        value="CURRENT" id="CURRENT">Current</label>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
-                                <button type="button" class="btn btn-success" @click="createAccount">Acept</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+			<!-- Modal Transfers -->
+			<div class="container">
+				<div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+					tabindex="-1">
+					<div class="modal-dialog modal-dialog-centered">
+						<div class="modal-content">
+							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							<div class="modal-header">
+								<h5 class="modal-title" id="exampleModalToggleLabel">Please choose your own account or a
+									third party account</h5>
+							</div>
+							<div class="modal-body text-center">
+								<P>to be able to transfer to third parties you must enter the corresponding account</P>
+							</div>
+							<div class="container d-flex justify-content-between align-items-center mb-3">
+								<a class="btn btn-primary" href="./transfers.html">Own Account</a>
+								<a class="btn btn-primary" href="./someoneTranser.html">Someone Account</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
+					tabindex="-1">
+					<div class="modal-dialog modal-dialog-centered">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							</div>
+							<div class="modal-body">
+								Hide this modal and show the first with the button below.
+							</div>
+							<div class="modal-footer">
+								<button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Back to
+									first</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
 
-                <!-- Modal Delete Account -->
+		<!-- Footer -->
+		<footer class="d-flex justify-content-around align-items-center py-2">
+			<p class="mb-0">Hecho por - <strong>Galarza Alexis</strong> - </p>
+			<p class="mb-0">&copy; -{{anio}}- todos los derechos reservados</p>
+			<div class="justify-content-between">
+				<a class="contactIco" href="https://github.com/LuisAlexis73" target="_blank" rel="noopener noreferrer">
+					<i class='bx bxl-github fs-2 pt-2'></i>
+				</a>
+				<a class="contactIco" href="https://www.linkedin.com/in/luis-alexis-galarza/" target="_blank"
+					rel="noopener noreferrer">
+					<i class='bx bxl-linkedin-square fs-2 pt-2'></i>
+				</a>
+				<a class="contactIco" href="https://www.instagram.com/luis_alexis73/" target="_blank" rel="noopener noreferrer">
+					<i class="bx bxl-instagram fs-2 pt-2"></i>
+				</a>
+				<a class="contactIco" href="mailTo:la.galarza@outlook.com" target="_blank" rel="noopener noreferrer">
+					<i class="bx bxs-envelope fs-2 pt-2"></i>
+				</a>
+			</div>
+		</footer>
+	</div>
 
-                <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Are you sure that you want delete this
-                                    account?</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body text-center d-flex justify-content-evenly text-uppercase">
-                                <label v-for="account in accounts" class="mx-2" for="accountId"><input type="radio"
-                                        name="accountId" :value="account.id" v-model="accountId"
-                                        id="accountId">{{account.number}}</label>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
-                                <button type="button" class="btn btn-success" @click="removeAccount">Deleted!</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+	<!-- Axios -->
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
-            <!-- Modal Transfers -->
+	<!-- Sweet Alert -->
+	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-            <div class="container">
-                <div class="modal fade" id="exampleModalToggle" aria-hidden="true"
-                    aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            <div class="modal-header">
-                                <h3 class="modal-title" id="exampleModalToggleLabel">Please choose your own account or a
-                                    third party account</h3>
-                            </div>
-                            <div class="modal-body">
-                                <P>to be able to transfer to third parties you must enter the corresponding account</P>
-                            </div>
-                            <div class="modal-footer">
-                                <div class="d-flex">
-                                    <a class="btn btn-primary" href="./transfers.html">Own Account</a>
-                                    <a class="btn btn-primary" href="./someoneTranser.html">Someone Account</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal fade" id="exampleModalToggle2" aria-hidden="true"
-                    aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                Hide this modal and show the first with the button below.
-                            </div>
-                            <div class="modal-footer">
-                                <button class="btn btn-primary" data-bs-target="#exampleModalToggle"
-                                    data-bs-toggle="modal">Back to first</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </main>
-        <footer>
-            <div class="contacto d-flex justify-content-around align-items-center">
-                <div class="d-flex ">
-                    <p class="pt-2 mb-0">Hecho por -Galarza Alexis-</p>
-                    <a class="contactIco ps-2" href="">
-                        <i class='bx bxl-github fs-2 pt-2'></i>
-                    </a>
-                    <a class="contactIco ps-2" href="">
-                        <i class='bx bxl-linkedin-square fs-2 pt-2'></i>
-                    </a>
-                </div>
-                <p class="">&copy; todos los derechos reservados</p>
-                <p class="">Cohort -30 Full Stack Java- 2022</p>
-            </div>
-        </footer>
-    </div>
+	<!-- Vue -->
+	<script src="https://unpkg.com/vue@3"></script>
 
-    <!-- Axios -->
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<!-- JavaScript Bundle with Popper -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+		crossorigin="anonymous"></script>
 
-    <!-- Sweet Alert -->
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-    <!-- Vue -->
-    <script src="https://unpkg.com/vue@3"></script>
-
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-        crossorigin="anonymous"></script>
-
-    <!-- My Script -->
-    <script src="./assets/js/accounts.js"></script>
+	<!-- My Script -->
+	<script src="./assets/js/accounts.js"></script>
 </body>
 
 </html>

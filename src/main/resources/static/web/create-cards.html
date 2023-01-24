@@ -2,149 +2,146 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>| Created-Cards</title>
-    <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
-    <!-- Box Icons -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>| Created-Cards</title>
+	<link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
+	<!-- Box Icons -->
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-    <!-- Google fonts -->
-    <link
-        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700"
-        rel="stylesheet">
+	<!-- Google fonts -->
+	<link
+		href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700"
+		rel="stylesheet">
 
-        <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <!-- my CSS -->
-    <link rel="stylesheet" href="./assets/css/style.css">
+	<!-- CSS only -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+	<!-- my CSS -->
+	<link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
-    <div id="app">
-        <header class="d-flex align-items-center justify-content-between">
-            <div class="logo">
-                <a href="./reveal/index.html">
-                    <img class="mx-4" src="./assets/img/brand.jpg" alt="Logo bank brothers">
-                </a>
-            </div>
-            <nav class="navbar navbar-expand-lg mx-4 mt-4">
-                <div class="container-fluid">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link navbar-brand" href="accounts.html">Back to accounts</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link navbar-brand" aria-current="page" href="./reveal/index.html">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="log_out" @click="logOut">
-                                    <!-- <img class="desloguear" src="./assets/img/pngegg.png"> -->
-                                    <i class='bx bx-log-out-circle fs-2'></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </header>
+	<div id="app">
+		<header class="d-flex justify-content-between">
+			<div class="logo">
+				<a href="./reveal/index.html">
+					<img class="mx-4" src="./assets/img/brand.jpg" alt="Logo bank brothers">
+				</a>
+			</div>
+			<nav class="navbar navbar-expand-md navbar-light">
+				<div class="container-fluid">
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+						aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+						<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+							<li class="nav-item">
+								<a class="nav-link navbar-brand" href="accounts.html">Back to accounts</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link navbar-brand" aria-current="page" href="./loan-application.html">Loans</a>
+							</li>
+							<li class="nav-item">
+								<a class="log_out" @click="logOut">
+									<i class='bx bx-log-out-circle fs-2'></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
 
-        <main>
-        
-            <div class="container-fluid">
-                <h3 class="titulo text-center py-3 bg-body">CREATE CARDS</h3>
-                <div class="container d-flex mt-4 pt-2 justify-content-evenly">
-                    <div>                        
-                        <h6>Type Card:</h6>
-                        <select v-model="selectedType">
-                            <option disabled value="">Select type card</option>
-                            <option>DEBIT</option>
-                            <option>CREDIT</option>
-                        </select>
-                    </div>
-    
-                    <div>
-                        <h6>Type Color:</h6>
-                        <select v-model="selectedColor">
-                            <option disabled value="">Select color card</option>
-                            <option>SILVER</option>
-                            <option>TITANIUM</option>
-                            <option>GOLD</option>
-                        </select>
-                    </div>
-    
-                </div>
-                <div class="text-center mt-2">
-                    <button type="submit" class="btnCreateCard w-25 " @click="createCards">Create a card</button>
-                </div>
-            </div>
+		<main>
+			<div class="container-fluid">
+				<h3 class="titulo text-center py-3 bg-body">CREATE CARDS</h3>
+				<div class="container d-flex mt-4 pt-2 justify-content-evenly">
+					<div>
+						<h6>Type Card:</h6>
+						<select v-model="selectedType" class="form-select form-select mb-3">
+							<option disabled>Select type card</option>
+							<option value="1">DEBIT</option>
+							<option value="2">CREDIT</option>
+						</select>
+					</div>
 
-            <div class="container mt-5">
-                <h3 class="mt-5" style="color: #0c2e8a;">Cards:</h3>
-                <table class="table table_1" id="table_1">
-                    <tr class="table-light">
-                        <td>Cardholder</td>
-                        <td>Number</td>
-                        <td>Cvv</td>
-                        <td>Thru date</td>
-                        <td>Type</td>
-                        <td>Color</td>
-                    </tr>
-                    <tr v-for="card in cards">
-                        <td>{{card.cardHolder}}</td>
-                        <td>{{card.number}}</td>
-                        <td>{{card.cvv}}</td>
-                        <td>{{card.thruDate}}</td>
-                        <td>{{card.type}}</td>
-                        <td class="text-success">{{card.color}}</td>
-                    </tr>
-                </table>
-                <h2 class="pt-3" v-if="cards.length == 0">No cards for now.</h2>
-            </div>
+					<div>
+						<h6>Type Color:</h6>
+						<select v-model="selectedColor" class="form-select form-select mb-3">
+							<option disabled>Select color card</option>
+							<option value="1">SILVER</option>
+							<option value="2">TITANIUM</option>
+							<option value="3">GOLD</option>
+						</select>
+					</div>
 
-        </main>
-        <footer>
-            <div class="contacto d-flex justify-content-around align-items-center">
-                <div class="d-flex ">
-                    <p class="pt-2 mb-0">Hecho por -Galarza Alexis-</p>
-                    <a class="contactIco ps-2" href="">
-                        <i class='bx bxl-github fs-2 pt-2'></i>
-                    </a>
-                    <a class="contactIco ps-2" href="">
-                        <i class='bx bxl-linkedin-square fs-2 pt-2'></i>
-                    </a>
-                </div>
-                <p class="">&copy; todos los derechos reservados</p>
-                <p class="">Cohort -30 Full Stack Java- 2022</p>
-            </div>
-        </footer>
-    </div>
+				</div>
+				<div class="text-center">
+					<button type=" submit" class="btnCreateCard" @click="createCards">Create a card</button>
+				</div>
+			</div>
+
+			<div class="container">
+				<h3 class="mt-2">Cards:</h3>
+
+				<div v-for="card in cards" class="card text-light fw-semibold" style="max-width: 30rem;">
+					<img src="./assets/img/credit-card-bg-claro.png" class="card-img" alt="">
+					<div class="card-img-overlay">
+						<h5 class="card-title">{{card.cardHolder}}</h5>
+						<!-- <p class="card-text">{{card.cvv}}</p> -->
+						<p class="card-text">{{card.thruDate}}</p>
+						<p class="card-text text-center pt-5">{{card.number}}</p>
+						<div class="footer-card d-flex justify-content-between">
+							<p>{{card.color}}</p>
+							<p>{{card.type}}</p>
+						</div>
+					</div>
+				</div>
+				<h2 class="pt-3" v-if="cards.length == 0">No cards for now.</h2>
+			</div>
+
+		</main>
+		<footer class="d-flex justify-content-around align-items-center py-2">
+			<p class="mb-0">Hecho por - <strong>Galarza Alexis</strong> - </p>
+			<p class="mb-0">&copy; -{{anio}}- todos los derechos reservados</p>
+			<div class="justify-content-between">
+				<a class="contactIco" href="https://github.com/LuisAlexis73" target="_blank" rel="noopener noreferrer">
+					<i class='bx bxl-github fs-2 pt-2'></i>
+				</a>
+				<a class="contactIco" href="https://www.linkedin.com/in/luis-alexis-galarza/" target="_blank"
+					rel="noopener noreferrer">
+					<i class='bx bxl-linkedin-square fs-2 pt-2'></i>
+				</a>
+				<a class="contactIco" href="https://www.instagram.com/luis_alexis73/" target="_blank" rel="noopener noreferrer">
+					<i class="bx bxl-instagram fs-2 pt-2"></i>
+				</a>
+				<a class="contactIco" href="mailTo:la.galarza@outlook.com" target="_blank" rel="noopener noreferrer">
+					<i class="bx bxs-envelope fs-2 pt-2"></i>
+				</a>
+			</div>
+		</footer>
+	</div>
 
 
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-        crossorigin="anonymous"></script>
+	<!-- JavaScript Bundle with Popper -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+		crossorigin="anonymous"></script>
 
-    <!-- Sweet alert -->
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	<!-- Sweet alert -->
+	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-    <!-- Axios -->
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<!-- Axios -->
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
-    <!-- Vue -->
-    <script src="https://unpkg.com/vue@3"></script>
+	<!-- Vue -->
+	<script src="https://unpkg.com/vue@3"></script>
 
-    <!-- my Script -->
-    <script src="./assets/js/create-cards.js"></script>
+	<!-- my Script -->
+	<script src="./assets/js/create-cards.js"></script>
 </body>
 
 </html>

@@ -13,6 +13,7 @@ const app = Vue.createApp({
         { value: "DEBIT", text: "DEBIT" },
         { text: "CREDIT", value: "CREDIT" },
       ],
+      anio: ""
     };
   },
 
@@ -21,6 +22,7 @@ const app = Vue.createApp({
       this.cards = response.data.cards;
       console.log(this.cards);
     });
+    this.anio = new Date().getFullYear();
   },
 
   methods: {
@@ -37,13 +39,13 @@ const app = Vue.createApp({
         if (result.isConfirmed) {
           axios.post("/api/logout")
             .then(response => location.href = "./reveal/index.html")
-            .catch(function (error){
+            .catch(function (error) {
               alert(error)
             })
         }
       })
     },
-    
+
     createCards() {
       axios
         .post(
@@ -51,21 +53,21 @@ const app = Vue.createApp({
           `cardType=${this.selectedType}&cardColor=${this.selectedColor}`
         )
         .then((response) =>
-        Swal.fire({
-          icon: "success",
-          title: "Great!",
-          text: "Your card have been created",
-          timer: 2500,
-        }),
-        setTimeout(() => { location.href = "/web/cards.html"}, 2000)
+          Swal.fire({
+            icon: "success",
+            title: "Great!",
+            text: "Your card have been created",
+            timer: 2500,
+          }),
+          setTimeout(() => { location.href = "/web/cards.html" }, 2500)
         )
-        .catch((x) => 
-        Swal.fire({
-          icon: 'error',
-          title: 'Oops...',
-          text: "Some was wrong.. plesea check all fields."
-        }),
-        setTimeout(() => { location.href = "/web/create-cards.html"}, 2500)
+        .catch((x) =>
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: "Some was wrong!! plesea check all fields."
+          }),
+          setTimeout(() => { location.href = "/web/create-cards.html" }, 2500)
         )
     },
   },

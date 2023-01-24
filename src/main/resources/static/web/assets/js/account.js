@@ -1,29 +1,26 @@
 let id = new URLSearchParams(window.location.search).get("id");
 
-const app = Vue.
-
-createApp({
+const app = Vue.createApp({
   data() {
     return {
       account: [],
       transactions: [],
-      accountId: []
+      accountId: [],
+      anio: ""
     };
   },
 
   created() {
-    axios
-    .get("/api/clients/current")
-    .then((response) => {
-      this.account = response.data.accounts.sort(function(a, b){return a.id - b.id});
-      this.accountId = this.account.find(acc=> acc.id == id);
-      this.transactions = this.accountId.transaction;
-      console.log(this.account);
-    })
+    this.anio = new Date().getFullYear();
 
-    // let params = new URLSearchParams(location.search)
-    // let id = params.get("id")
-    // this.getAccount(id);
+    axios
+      .get("/api/clients/current")
+      .then((response) => {
+        this.account = response.data.accounts.sort(function (a, b) { return a.id - b.id });
+        this.accountId = this.account.find(acc => acc.id == id);
+        this.transactions = this.accountId.transaction;
+        console.log(this.accountId);
+      })
   },
 
   methods: {
@@ -40,7 +37,7 @@ createApp({
         if (result.isConfirmed) {
           axios.post("/api/logout")
             .then(response => location.href = "./reveal/index.html")
-            .catch(function (error){
+            .catch(function (error) {
               alert(error)
             })
         }

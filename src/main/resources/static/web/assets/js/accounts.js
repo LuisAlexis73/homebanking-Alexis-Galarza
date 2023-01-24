@@ -5,7 +5,8 @@ const app = Vue.createApp({
       accounts: [],
       loans: [],
       accountType: "",
-      accountId: ""
+      accountId: "",
+      anio: ""
     };
   },
 
@@ -18,6 +19,7 @@ const app = Vue.createApp({
         this.accounts = this.accounts.filter(state => state.active == true);
 
         this.loans = response.data.clientLoans;
+        this.anio = new Date().getFullYear();
       })
       .catch(function (error) {
         console.log(error);
@@ -38,7 +40,7 @@ const app = Vue.createApp({
         if (result.isConfirmed) {
           axios.post("/api/logout")
             .then(response => location.href = "./reveal/index.html")
-            .catch(function (error){
+            .catch(function (error) {
               alert(error)
             })
         }
@@ -55,7 +57,7 @@ const app = Vue.createApp({
             text: "Your account have been created",
             timer: 1500,
           }),
-          setTimeout(() => { location.href = "/web/accounts.html"}, 2000)
+          setTimeout(() => { location.href = "/web/accounts.html" }, 1500)
         )
         .catch((response) =>
           Swal.fire({
@@ -66,25 +68,25 @@ const app = Vue.createApp({
         );
     },
 
-    removeAccount(){
-      axios.patch('/api/clients/current/accounts/remove',`accountId=${this.accountId}`)
-      .then(() => {
+    removeAccount() {
+      axios.patch('/api/clients/current/accounts/remove', `accountId=${this.accountId}`)
+        .then(() => {
           Swal.fire({
-              position: 'top-end',
-              icon: 'success',
-              title: "your account was deleted",
-              showConfirmButton: false,
-              timer:1500
+            position: 'top-end',
+            icon: 'success',
+            title: "your account was deleted",
+            showConfirmButton: false,
+            timer: 1500
           }),
-          setTimeout(() => { location.href = "/web/accounts.html"}, 1500)
-      })
-      .catch((error) => {
+            setTimeout(() => { location.href = "/web/accounts.html" }, 1500)
+        })
+        .catch((error) => {
           Swal.fire({
-              icon: 'error',
-              showConfirmButton: true,
-              text: error.response.data
+            icon: 'error',
+            showConfirmButton: true,
+            text: 'you cannot delete an account that still has available balance'
           })
-      });
-  }
+        });
+    }
   },
 }).mount("#app");
